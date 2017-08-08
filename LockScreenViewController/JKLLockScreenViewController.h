@@ -11,10 +11,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, LockScreenMode) {
-    LockScreenModeNormal = 0,       // [일반 모드]
-    LockScreenModeNew,              // [신규 모드]
-    LockScreenModeChange,           // [변경 모드]
-    LockScreenModeVerification,     // [확인 모드]
+    LockScreenModeNormal = 0,
+    LockScreenModeNew,
+    LockScreenModeChange,
+    LockScreenModeTurnOff,
 };
 
 @protocol JKLLockScreenViewControllerDelegate;
@@ -22,14 +22,13 @@ typedef NS_ENUM(NSInteger, LockScreenMode) {
 
 @interface JKLLockScreenViewController : UIViewController
 
-@property (nonatomic, unsafe_unretained) LockScreenMode lockScreenMode;
+@property (nonatomic, assign) LockScreenMode lockScreenMode;
 @property (nonatomic, weak) IBOutlet id<JKLLockScreenViewControllerDelegate> delegate;
 @property (nonatomic, weak) IBOutlet id<JKLLockScreenViewControllerDataSource> dataSource;
 
-/**
- *  Tint color for the buttons
- */
-@property (nonatomic, weak) UIColor *tintColor;
+@property (nonatomic, strong) UIColor *tintColor;
+
+@property (nonatomic, strong) UIColor *titleColor;
 
 @end
 

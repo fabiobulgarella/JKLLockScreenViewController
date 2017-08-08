@@ -50,10 +50,6 @@ static const NSUInteger LSPMaxPincodeLength = 4;
     self.pincode = @"";
 }
 
-/**
- 핀코드를 설정하는 프로퍼티 메소드
- @param NSString PIN code
- */
 - (void)setPincode:(NSString *)pincode {
     
     if (_pincode != pincode) {
@@ -68,24 +64,19 @@ static const NSUInteger LSPMaxPincodeLength = 4;
     }
 }
 
-/**
- 핀코드를 추가하는 메소드
- @param NSString PIN code
- */
+
 - (void)appendingPincode:(NSString *)pincode {
 
     if (!_enabled) return;
 
     NSString * appended = [_pincode stringByAppendingString:pincode];
 
-    // 최대 자릿수를 넘는다면 최대 자릿수만큼만 설정
+
     NSUInteger length = MIN([appended length], LSPMaxPincodeLength);
     self.pincode = [appended substringToIndex:length];
 }
 
-/**
- 마지막 핀코드를 제거하는 메소드
- */
+
 - (void)removeLastPincode {
     
     if (!_enabled) return;
@@ -107,8 +98,6 @@ static const NSUInteger LSPMaxPincodeLength = 4;
     }
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     [super drawRect:rect];
