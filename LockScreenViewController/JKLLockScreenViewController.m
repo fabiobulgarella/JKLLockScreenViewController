@@ -419,8 +419,12 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
     return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    return [[[[[UIApplication sharedApplication] delegate] window] rootViewController] preferredStatusBarStyle];
+    return UIStatusBarStyleDefault;
 }
 
 @end
