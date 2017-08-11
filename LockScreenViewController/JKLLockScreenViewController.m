@@ -177,7 +177,7 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         // evaluate
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:NSLocalizedString(@"Passcode TouchID", nil)
+                localizedReason:NSLocalizedString(@"Press Home to Unlock", nil)
                           reply:^(BOOL success, NSError * authenticationError) {
                               if (success) {
                                   [self lsv_unlockDelayDismissViewController:LSVDismissWaitingDuration];
