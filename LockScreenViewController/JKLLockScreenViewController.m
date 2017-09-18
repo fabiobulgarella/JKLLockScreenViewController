@@ -68,6 +68,9 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [_cancelButton setTitle:NSLocalizedString(@"Cancel", nil) forState:UIControlStateNormal];
+    [_deleteButton setTitle:NSLocalizedString(@"Delete", nil) forState:UIControlStateNormal];
+    
     [self setLockScreenInternalModeInitial];
 
     [self updateViewForMode];
@@ -82,7 +85,7 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
 }
 
 - (void)updateViewForMode{
-
+    
     switch (_lockScreenInternalMode) {
             
         case LockScreenInternalModeNormal: {
@@ -177,7 +180,7 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         // evaluate
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:NSLocalizedString(@"Press Home to Unlock", nil)
+                localizedReason:NSLocalizedString(@"Tap Home button to unlock", nil)
                           reply:^(BOOL success, NSError * authenticationError) {
                               if (success) {
                                   [self lsv_unlockDelayDismissViewController:LSVDismissWaitingDuration];
