@@ -102,13 +102,13 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
             break;
 
         case LockScreenInternalModeNewPincode: {
-            [self lsv_updateTitle:NSLocalizedString(@"Set Passcode",  nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Set passcode",  nil)
                          subtitle:NSLocalizedString(@"Enter a passcode", nil)];
         }
             break;
             
         case LockScreenInternalModeNewPincodeVerification: {
-            [self lsv_updateTitle:NSLocalizedString(@"Set Passcode",  nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Set passcode",  nil)
                              subtitle:NSLocalizedString(@"Verify your new passcode", nil)];
             break;
         }
@@ -180,7 +180,7 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         // evaluate
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:NSLocalizedString(@"Tap Home button to unlock", nil)
+                localizedReason:NSLocalizedString(@"Touch ID or enter passcode", nil)
                           reply:^(BOOL success, NSError * authenticationError) {
                               if (success) {
                                   [self lsv_unlockDelayDismissViewController:LSVDismissWaitingDuration];
