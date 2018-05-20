@@ -114,19 +114,19 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
         }
             
         case LockScreenInternalModeChangeOldPincode:{
-            [self lsv_updateTitle:NSLocalizedString(@"Change Passcode", nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Change passcode", nil)
                              subtitle:NSLocalizedString(@"Enter your old passcode", nil)];
         }
             break;
             
         case LockScreenInternalModeChangeNewPincode:{
-            [self lsv_updateTitle:NSLocalizedString(@"Change Passcode", nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Change passcode", nil)
                          subtitle:NSLocalizedString(@"Enter your new passcode", nil)];
         }
             break;
             
         case LockScreenInternalModeChangeNewPincodeVerification:{
-            [self lsv_updateTitle:NSLocalizedString(@"Change Passcode", nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Change passcode", nil)
                          subtitle:NSLocalizedString(@"Verify your new passcode", nil)];
         }
             break;
