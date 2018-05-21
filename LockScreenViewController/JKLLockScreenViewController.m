@@ -90,13 +90,13 @@ typedef NS_ENUM(NSInteger, LockScreenInternalMode) {
             
         case LockScreenInternalModeNormal: {
             [_cancelButton setHidden:YES];
-            [self lsv_updateTitle:NSLocalizedString(@"Enter Passcode",   nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Enter passcode",   nil)
                          subtitle:NSLocalizedString(@"Enter your passcode", nil)];
         }
             break;
             
         case LockScreenInternalModeTurnOff: {
-            [self lsv_updateTitle:NSLocalizedString(@"Enter Passcode",   nil)
+            [self lsv_updateTitle:NSLocalizedString(@"Enter passcode",   nil)
                          subtitle:NSLocalizedString(@"Enter your passcode", nil)];
         }
             break;
