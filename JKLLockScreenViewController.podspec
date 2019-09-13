@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.platform = :ios, '6.0'
   s.source_files = 'LockScreenViewController/*.{h,m}'
   s.resources = 'LockScreenViewController/*.{xib}'
+  s.resource_bundles = {'LockScreenViewController' => ['LockScreenViewController/*.{xib}']}
   s.requires_arc = true
 end
