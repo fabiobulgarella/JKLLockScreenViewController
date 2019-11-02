@@ -6,12 +6,12 @@ Pod::Spec.new do |s|
     'Choi Joong Kwan' => 'joongkwan.choi@gmail.com'
   }
   s.source = {
-    :git => 'https://github.com/tiny2n/JKLLockScreenViewController.git',
+    :git => 'https://github.com/leshkoapps/JKLLockScreenViewController.git',
     :tag => s.version.to_s
   }
   s.homepage     = "http://tiny2n.tistory.com"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.platform = :ios, '6.0'
+  s.platform = :ios, '9.0'
   s.source_files = 'LockScreenViewController/*.{h,m}'
   s.resource_bundles = {'JKLLockScreenViewController' => ['LockScreenViewController/*.{xib}']}
   s.requires_arc = true
