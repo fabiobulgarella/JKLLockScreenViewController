@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'JKLLockScreenViewController'
-  s.version      = '1.0.1'
+  s.version      = '1.1.1'
   s.summary      = 'It is Lock Screen Controller on platform iOS.'
   s.author = {
     'Choi Joong Kwan' => 'joongkwan.choi@gmail.com'
